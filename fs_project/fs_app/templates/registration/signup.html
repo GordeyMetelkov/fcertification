@@ -1,0 +1,30 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+      <section class="login-section center">
+            <h2 class="login_h2">Регистрация</h2>
+            <form class="login-form" method="post">
+                  {% csrf_token %}
+                  <div class="login-form_item registry-form">
+                        <label>Имя пользователя</label>
+                        {{ form.username }}
+                  </div>
+                  <div class="login-form_item registry-form">
+                        <label>Пароль</label>
+                        {{ form.password1 }}
+                  </div>
+                  <div class="login-form_item registry-form">
+                        <label>Повторите пароль</label>
+                        {{ form.password2 }}
+                  </div>
+                  {% if form.errors %}
+                        <div class="errors">
+                              {% for key, values in form.errors.items %}
+                                    {{ values }}
+                              {% endfor %}
+                        </div>
+                  {% endif %}
+                  <input class="login-form_btn" type="submit" value="Регистрация">
+            </form>
+      </section>
+{% endblock %}

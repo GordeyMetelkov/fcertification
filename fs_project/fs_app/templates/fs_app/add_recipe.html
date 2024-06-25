@@ -1,0 +1,38 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+    <div class="add-recipe center">
+        <form class="recipe-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-item ">
+                <label>Название:</label>  
+                {{ form.name }} 
+            </div>
+            <div class="form-item form-textarea">
+                <label>Описание:</label>  
+                {{ form.description }} 
+            </div>
+            <div class="form-item form-textarea">
+                <label>Шаги приготовления:</label>  
+                {{ form.cooking_steps }} 
+            </div>
+            <div class="form-item">
+                <label>Время приготовления:</label>  
+                <div>{{ form.cooking_time_hours }} <label">ч.</label> {{ form.cooking_time_minutes }} <label">мин.</label></div>
+            </div>
+            <div class="form-item">
+                <label>Автор:</label>  
+                {{ form.author }} 
+            </div>
+            <div class="form-item">
+                <label>Категория:</label>  
+                {{ form.category }} 
+            </div>
+            <div class="form-item">
+                <label>Изображение:</label>  
+                {{ form.image }}
+            </div>
+            <input class="form-input" type="submit" value="Добавить">
+        </form>
+    </div>
+{% endblock %}

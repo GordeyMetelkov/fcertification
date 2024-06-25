@@ -1,0 +1,17 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+    <div class="index-content-category center">
+        {% for recipe in recipes %}
+            <div class="recipe-category">
+                <a class="recipe-from-category" href="{% url 'recipe' recipe.pk %}">
+                    <h2 class="recipe_name">{{ recipe.name }}</h2>
+                    <div class="recipe_image-category">
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe_name }}">
+                    </div>    
+                </a>
+                <p class="recipe_description-category">{{ recipe.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

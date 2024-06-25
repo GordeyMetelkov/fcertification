@@ -1,0 +1,38 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+    <div class="categories center">
+        <div class="categories-item">
+            <a href="{% url 'category' 'Первые блюда'%}">
+                <p class="categories-item_text">Первые блюда</p>
+            </a>
+            <a href="{% url 'category' 'Первые блюда'%}">
+                <img class="categories-img" src="../../../media/pervye.jpg" alt="первые блюда">
+            </a>
+        </div>
+        <div class="categories-item">
+            <a href="{% url 'category' 'Вторые блюда'%}">
+                <p class="categories-item_text">Вторые блюда</p>
+            </a>
+            <a href="{% url 'category' 'Вторые блюда'%}">
+                <img class="categories-img" src="../../../media/vtorye.jpg" alt="вторые блюда">
+            </a>
+        </div>
+        <div class="categories-item">
+            <a href="{% url 'category' 'Выпечка'%}">
+                <p class="categories-item_text">Выпечка</p>
+            </a>
+            <a href="{% url 'category' 'Выпечка'%}">
+                <img class="categories-img" src="../../../media/vypechka.jpg" alt="выпечка">
+            </a>
+        </div>
+        <div class="categories-item">
+            <a href="{% url 'category' 'Десерты'%}">
+                <p class="categories-item_text">Десерты</p>
+            </a>
+            <a href="{% url 'category' 'Десерты'%}">
+                <img class="categories-img" src="../../../media/desserts.jpg" alt="десерты">
+            </a>    
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); 
+
+* {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited{
+    color: #0000FF;
+}
+a:active {
+    color: #7d7fd3;
+}
+.center {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background-color: #e3f2fd;
+    width: 100%;
+    height: 50px;
+}
+
+.header-section {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.header-logo {
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+}
+.header-logo:hover {
+    transform: scale(1.2);
+    transform:rotate(360deg);
+}
+
+.header-navbar {
+    display: flex;
+    gap: 15px;
+}
+.header-registry {
+    display: flex;
+    gap: 15px;
+}
+.registry_p {
+    color: rgb(255, 134, 152);
+    font-weight: 600;
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: #f6e2f3;
+}
+.footer-section {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.footer-text {
+    font-size: x-small;
+    margin-bottom: 0;
+    text-align: center;
+    color: rgb(89, 88, 89);
+}
+.footer-gb {
+    text-decoration: none;
+    color: rgb(89, 88, 89);
+    font-style: italic;
+    transition: 0.3s;
+}
+.footer-gb:visited {
+    color: rgb(89, 88, 89);
+}
+
+.footer-gb:hover {
+    font-size: small;
+    color: darkgray;
+}
+.footer-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-contacts {
+    display: flex;
+    gap: 10px;
+    height: 33%;    
+}
+
+.footer-contact_text {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.index-content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 25px;
+    background: #e3e0e031;
+}
+.recipe_name, .recipe_category {
+    color: rgb(44 95 224 / 75%)
+}
+.recipe_name {
+    font-size: large;
+}
+.recipe_image {
+    margin-top: 20px;
+    height:300px;
+    width:300px;
+    border-radius:55%;
+    overflow: hidden;
+    text-align: center;
+}
+.recipe_image img {
+    height: 250px;
+    width: 250px;
+
+}
+.recipe-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: rgb(44 95 224 / 75%)
+
+}
+.recipe-div{
+    height: 100vh;
+}
+
+
+.recipe {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: max-content;
+    background-color: #e3e0e031;
+}
+.recipe_steps {
+    display: none;
+}
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+.label-button {
+    position: relative;
+    display: block;
+    width: 100px;
+    cursor: pointer;
+}
+.label-p {
+    text-align: center;
+    width: 100px;
+    border-radius: 25px;
+    font-size: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: whitesmoke;
+    background-color: rgb(119, 0, 255);
+    transition: 0.4s;
+}
+.checkbox:checked + .recipe_steps {
+    display: block;
+}
+
+.index-content-category { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 100vh;
+}
+.recipe-category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #e3e0e031;
+    height: auto;
+}
+.recipe-from-category {
+    text-align: center;
+}
+.recipe-from-category h2{
+    margin-bottom: 15px;
+}
+.recipe_image-category {
+    height:200px;
+    width:200px;
+    border-radius:55%;
+    overflow: hidden;
+}
+.recipe_image-category img {
+    height: 150px;
+    width: 150px;
+}
+.recipe_description-category {
+    width: 530px;
+    text-align: justify;
+    color: #531111b9;
+}
+.recipe_steps, .recipe_description {
+    color: #531111b9;
+}
+.categories{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.categories-img {
+    margin-top: 20px;
+    border: none;
+    border-radius: 100px 50px / 120px;
+    overflow: hidden;
+    width: 400px;
+    height: 290px;
+    box-shadow: 0 0 20px violet;
+}
+.categories-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.categories-item_text {
+    display: inline-block;
+}
+
+.recipe-form {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: whitesmoke;
+    transition: 0.4s;
+}
+.form-item {
+    width: 287px;
+    padding: 25px;
+    border: thick double #32a1ce;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    color: rgb(77, 70, 70);
+    background-color:#fff7f8;
+}
+.form-textarea {
+    width: max-content;
+}
+.form-item label{
+    color: rgb(249, 160, 175);
+}
+
+.form-input {
+    border: none;
+    background-color: #a938ea;
+    color: white;
+    border-radius: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-input:hover {
+    transform: scale(1.1);
+}
+.recipe-form:valid {
+    box-shadow: 0 0 20px green;
+}
+.login-section, .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login-section {
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.login-form {
+    max-height: 250px;
+    max-width: 350px;
+    align-items: flex-end;
+    /* padding: 260px; */
+    /* background-image: url("../../../media/login-img.jpg"); */
+}
+.login-form_item {
+    color:#053b68c3;
+    font-weight: 800;
+}
+.login_h2 {
+    color:#053b68c3;
+    font-weight: 800;
+}
+.login-form_btn {
+    color:#053b68c3;
+    font-weight: 800;
+    background-color: #ffe6f0;
+    border: solid 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.registry-form {
+    color: #0a0a09c3;
+}
+.errors {
+    color: red;
+    font-weight: 800;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,23 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+    <div class="recipe-div">
+        <section class="recipe center">
+            <h2 class="recipe_name">{{ recipe.name }}</h2>
+            <div class="recipe_image">
+                <img src="{{ recipe.image.url }}" alt="{{ recipe_name }}">
+            </div>
+            <p class="recipe_description">{{ recipe.description }}</p>
+            <label class="label-button" for="checkbox">
+                <p class="label-p">Шаги приготовления</p>
+            </label>
+            <input id="checkbox" class="checkbox" type="checkbox">
+            <p class="recipe_steps">{{ recipe.cooking_steps }}</p>
+            <div class="recipe-footer">
+                <p class="recipe_author">{{ recipe.author }}</p>
+                <p class="recipe_cooking_time">{{ time }}</p>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

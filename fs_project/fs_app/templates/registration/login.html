@@ -1,0 +1,29 @@
+{% extends 'fs_app/index.html' %}
+
+{% block content %}
+      <section class="login-section center">
+            <h2 class="login_h2">Вход в систему</h2>
+            <!-- <div class="login_img">
+                  <img src="../../../media/login-img.jpg" alt="повар">
+            </div> -->
+            <form class="login-form" method="post">
+                  {% csrf_token %}
+                  <div class="login-form_item">
+                        <label>Имя пользователя</label>
+                        {{ form.username }}
+                  </div>
+                  <div class="login-form_item">
+                        <label>Пароль</label>
+                        {{ form.password }}
+                  </div>
+                  {% if form.errors %}
+                        <div class="errors">
+                              {% for key, values in form.errors.items %}
+                                    {{ values }}
+                              {% endfor %}
+                        </div>
+                  {% endif %}
+                  <input class="login-form_btn" type="submit" value="Вход">
+            </form>
+      </section>
+{% endblock %}
